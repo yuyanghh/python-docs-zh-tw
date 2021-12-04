@@ -26,7 +26,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Concurrent Execution" href="concurrency.html" />
+    <link rel="next" title="並行執行 (Concurrent Execution)" href="concurrency.html" />
     <link rel="prev" title="errno --- Standard errno system symbols" href="errno.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/ctypes.html" />
     
@@ -117,7 +117,7 @@
                         title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">errno</span></code> --- Standard errno system symbols</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="concurrency.html"
-                        title="下一章">Concurrent Execution</a></p>
+                        title="下一章">並行執行 (Concurrent Execution)</a></p>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
@@ -144,7 +144,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="concurrency.html" title="Concurrent Execution"
+          <a href="concurrency.html" title="並行執行 (Concurrent Execution)"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="errno.html" title="errno --- Standard errno system symbols"
@@ -455,7 +455,7 @@ more about <a class="reference internal" href="#module-ctypes" title="ctypes: A 
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ctypes.c_wchar_p" title="ctypes.c_wchar_p"><code class="xref py py-class docutils literal notranslate"><span class="pre">c_wchar_p</span></code></a></p></td>
 <td><p><span class="xref c c-texpr"><span class="n">wchar_t</span><span class="p">*</span></span> (NUL terminated)</p></td>
-<td><p>string or <code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p>字串或 <code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ctypes.c_void_p" title="ctypes.c_void_p"><code class="xref py py-class docutils literal notranslate"><span class="pre">c_void_p</span></code></a></p></td>
 <td><p><span class="xref c c-texpr"><span class="kt">void</span><span class="p">*</span></span></p></td>
@@ -1382,7 +1382,7 @@ It returns the filename of the library file.</p>
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>On Linux, the value of the environment variable <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> is used
 when searching for libraries, if a library cannot be found by any other means.</p>
 </div>
-<p>Here are some examples:</p>
+<p>以下是一些範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ctypes.util</span> <span class="kn">import</span> <span class="n">find_library</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">find_library</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span>
 <span class="go">&#39;libm.so.6&#39;</span>
@@ -2722,7 +2722,7 @@ attribute changes the pointer to point to the assigned object.</p>
                         title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">errno</span></code> --- Standard errno system symbols</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="concurrency.html"
-                        title="下一章">Concurrent Execution</a></p>
+                        title="下一章">並行執行 (Concurrent Execution)</a></p>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
@@ -2748,7 +2748,7 @@ attribute changes the pointer to point to the assigned object.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="concurrency.html" title="Concurrent Execution"
+          <a href="concurrency.html" title="並行執行 (Concurrent Execution)"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="errno.html" title="errno --- Standard errno system symbols"
@@ -2801,11 +2801,11 @@ attribute changes the pointer to point to the assigned object.</p>
 <br />
     <br />
 
-    最後更新於 11月 21, 2021。
+    最後更新於 12月 04, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
     </div>
 
   </body>

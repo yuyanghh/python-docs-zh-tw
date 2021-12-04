@@ -79,7 +79,10 @@
 <li><a class="reference internal" href="#logging-to-multiple-destinations">Logging to multiple destinations</a></li>
 <li><a class="reference internal" href="#configuration-server-example">Configuration server example</a></li>
 <li><a class="reference internal" href="#dealing-with-handlers-that-block">Dealing with handlers that block</a></li>
-<li><a class="reference internal" href="#sending-and-receiving-logging-events-across-a-network">Sending and receiving logging events across a network</a></li>
+<li><a class="reference internal" href="#sending-and-receiving-logging-events-across-a-network">Sending and receiving logging events across a network</a><ul>
+<li><a class="reference internal" href="#running-a-logging-socket-listener-in-production">Running a logging socket listener in production</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adding-contextual-information-to-your-logging-output">Adding contextual information to your logging output</a><ul>
 <li><a class="reference internal" href="#using-loggeradapters-to-impart-contextual-information">Using LoggerAdapters to impart contextual information</a><ul>
 <li><a class="reference internal" href="#using-objects-other-than-dicts-to-pass-contextual-information">Using objects other than dicts to pass contextual information</a></li>
@@ -90,6 +93,7 @@
 </li>
 <li><a class="reference internal" href="#logging-to-a-single-file-from-multiple-processes">Logging to a single file from multiple processes</a><ul>
 <li><a class="reference internal" href="#using-concurrent-futures-processpoolexecutor">Using concurrent.futures.ProcessPoolExecutor</a></li>
+<li><a class="reference internal" href="#deploying-web-applications-using-gunicorn-and-uwsgi">Deploying Web applications using Gunicorn and uWSGI</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#using-file-rotation">Using file rotation</a></li>
@@ -205,8 +209,8 @@
   <section id="logging-cookbook">
 <span id="id1"></span><h1>Logging Cookbook<a class="headerlink" href="#logging-cookbook" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>原文作者 Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
 </dd>
 </dl>
 <p>This page contains a number of recipes related to logging, which have been found
@@ -708,6 +712,14 @@ these affect you, you can use an alternative serialization scheme by overriding
 the <code class="xref py py-meth docutils literal notranslate"><span class="pre">makePickle()</span></code> method and implementing your
 alternative there, as well as adapting the above script to use your alternative
 serialization.</p>
+<section id="running-a-logging-socket-listener-in-production">
+<h3>Running a logging socket listener in production<a class="headerlink" href="#running-a-logging-socket-listener-in-production" title="本標題的永久連結">¶</a></h3>
+<p>To run a logging listener in production, you may need to use a process-management tool
+such as <a class="reference external" href="http://supervisord.org/">Supervisor</a>. <a class="reference external" href="https://gist.github.com/vsajip/4b227eeec43817465ca835ca66f75e2b">Here</a> is a Gist which
+provides the bare-bones files to run the above functionality using Supervisor: you
+will need to change the <cite>/path/to/</cite> parts in the Gist to reflect the actual paths you
+want to use.</p>
+</section>
 </section>
 <section id="adding-contextual-information-to-your-logging-output">
 <span id="context-info"></span><h2>Adding contextual information to your logging output<a class="headerlink" href="#adding-contextual-information-to-your-logging-output" title="本標題的永久連結">¶</a></h2>
@@ -1123,6 +1135,15 @@ Instead of</p>
 </pre></div>
 </div>
 </section>
+<section id="deploying-web-applications-using-gunicorn-and-uwsgi">
+<h3>Deploying Web applications using Gunicorn and uWSGI<a class="headerlink" href="#deploying-web-applications-using-gunicorn-and-uwsgi" title="本標題的永久連結">¶</a></h3>
+<p>When deploying Web applications using <a class="reference external" href="https://gunicorn.org/">Gunicorn</a> or <a class="reference external" href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a> (or similar), multiple worker
+processes are created to handle client requests. In such environments, avoid creating
+file-based handlers directly in your web application. Instead, use a
+<a class="reference internal" href="../library/logging.handlers.html#logging.handlers.SocketHandler" title="logging.handlers.SocketHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SocketHandler</span></code></a> to log from the web application to a listener in a separate
+process. This can be set up using a process management tool such as Supervisor - see
+<a class="reference internal" href="#running-a-logging-socket-listener-in-production">Running a logging socket listener in production</a> for more details.</p>
+</section>
 </section>
 <section id="using-file-rotation">
 <h2>Using file rotation<a class="headerlink" href="#using-file-rotation" title="本標題的永久連結">¶</a></h2>
@@ -1457,11 +1478,11 @@ of queues, for example a ZeroMQ 'subscribe' socket. Here's an example:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt>Module <a class="reference internal" href="../library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt><dd><p>API reference for the logging module.</p>
+<dt><a class="reference internal" href="../library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> 模組</dt><dd><p>API reference for the logging module.</p>
 </dd>
-<dt>Module <a class="reference internal" href="../library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt><dd><p>Configuration API for the logging module.</p>
+<dt><a class="reference internal" href="../library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a> 模組</dt><dd><p>Configuration API for the logging module.</p>
 </dd>
-<dt>Module <a class="reference internal" href="../library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a></dt><dd><p>Useful handlers included with the logging module.</p>
+<dt><a class="reference internal" href="../library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> 模組</dt><dd><p>Useful handlers included with the logging module.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="logging.html#logging-basic-tutorial"><span class="std std-ref">A basic logging tutorial</span></a></p>
@@ -3055,7 +3076,10 @@ more fine-grained than that).</p>
 <li><a class="reference internal" href="#logging-to-multiple-destinations">Logging to multiple destinations</a></li>
 <li><a class="reference internal" href="#configuration-server-example">Configuration server example</a></li>
 <li><a class="reference internal" href="#dealing-with-handlers-that-block">Dealing with handlers that block</a></li>
-<li><a class="reference internal" href="#sending-and-receiving-logging-events-across-a-network">Sending and receiving logging events across a network</a></li>
+<li><a class="reference internal" href="#sending-and-receiving-logging-events-across-a-network">Sending and receiving logging events across a network</a><ul>
+<li><a class="reference internal" href="#running-a-logging-socket-listener-in-production">Running a logging socket listener in production</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adding-contextual-information-to-your-logging-output">Adding contextual information to your logging output</a><ul>
 <li><a class="reference internal" href="#using-loggeradapters-to-impart-contextual-information">Using LoggerAdapters to impart contextual information</a><ul>
 <li><a class="reference internal" href="#using-objects-other-than-dicts-to-pass-contextual-information">Using objects other than dicts to pass contextual information</a></li>
@@ -3066,6 +3090,7 @@ more fine-grained than that).</p>
 </li>
 <li><a class="reference internal" href="#logging-to-a-single-file-from-multiple-processes">Logging to a single file from multiple processes</a><ul>
 <li><a class="reference internal" href="#using-concurrent-futures-processpoolexecutor">Using concurrent.futures.ProcessPoolExecutor</a></li>
+<li><a class="reference internal" href="#deploying-web-applications-using-gunicorn-and-uwsgi">Deploying Web applications using Gunicorn and uWSGI</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#using-file-rotation">Using file rotation</a></li>
@@ -3186,11 +3211,11 @@ more fine-grained than that).</p>
 <br />
     <br />
 
-    最後更新於 11月 21, 2021。
+    最後更新於 12月 04, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
     </div>
 
   </body>
