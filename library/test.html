@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>test --- Regression tests package for Python &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test --- Regression tests package for Python &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,13 +20,13 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Debugging and Profiling" href="debug.html" />
+    <link rel="next" title="除錯與效能分析" href="debug.html" />
     <link rel="prev" title="2to3 - 自動將 Python 2的程式碼轉成 Python 3" href="2to3.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/test.html" />
     
@@ -92,7 +92,7 @@
                         title="上一章">2to3 - 自動將 Python 2的程式碼轉成 Python 3</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="debug.html"
-                        title="下一章">Debugging and Profiling</a></p>
+                        title="下一章">除錯與效能分析</a></p>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
@@ -119,7 +119,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="debug.html" title="Debugging and Profiling"
+          <a href="debug.html" title="除錯與效能分析"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="2to3.html" title="2to3 - 自動將 Python 2的程式碼轉成 Python 3"
@@ -135,7 +135,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -396,7 +396,7 @@ different processes.</p>
 <a class="reference internal" href="socket.html#socket.socket.recv" title="socket.socket.recv"><code class="xref py py-meth docutils literal notranslate"><span class="pre">recv()</span></code></a> and <a class="reference internal" href="socket.html#socket.socket.send" title="socket.socket.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> methods of
 <a class="reference internal" href="socket.html#socket.socket" title="socket.socket"><code class="xref py py-class docutils literal notranslate"><span class="pre">socket.socket</span></code></a>.</p>
 <p>Its default value is 5 seconds.</p>
-<p>See also <a class="reference internal" href="#test.support.INTERNET_TIMEOUT" title="test.support.INTERNET_TIMEOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">INTERNET_TIMEOUT</span></code></a>.</p>
+<p>另請參閱 <a class="reference internal" href="#test.support.INTERNET_TIMEOUT" title="test.support.INTERNET_TIMEOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">INTERNET_TIMEOUT</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py data">
@@ -409,7 +409,7 @@ internet request is blocked for whatever reason.</p>
 failed, but skip the test instead: see
 <a class="reference internal" href="#test.support.socket_helper.transient_internet" title="test.support.socket_helper.transient_internet"><code class="xref py py-func docutils literal notranslate"><span class="pre">transient_internet()</span></code></a>.</p>
 <p>Its default value is 1 minute.</p>
-<p>See also <a class="reference internal" href="#test.support.LOOPBACK_TIMEOUT" title="test.support.LOOPBACK_TIMEOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">LOOPBACK_TIMEOUT</span></code></a>.</p>
+<p>另請參閱 <a class="reference internal" href="#test.support.LOOPBACK_TIMEOUT" title="test.support.LOOPBACK_TIMEOUT"><code class="xref py py-data docutils literal notranslate"><span class="pre">LOOPBACK_TIMEOUT</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py data">
@@ -1313,7 +1313,7 @@ except if the <code class="docutils literal notranslate"><span class="pre">__iso
 <dd><p>Assert that running the interpreter with <em>args</em> and optional environment
 variables <em>env_vars</em> fails (<code class="docutils literal notranslate"><span class="pre">rc</span> <span class="pre">!=</span> <span class="pre">0</span></code>) and return a <code class="docutils literal notranslate"><span class="pre">(return</span> <span class="pre">code,</span>
 <span class="pre">stdout,</span> <span class="pre">stderr)</span></code> tuple.</p>
-<p>See <a class="reference internal" href="#test.support.script_helper.assert_python_ok" title="test.support.script_helper.assert_python_ok"><code class="xref py py-func docutils literal notranslate"><span class="pre">assert_python_ok()</span></code></a> for more options.</p>
+<p>更多選項請見 <a class="reference internal" href="#test.support.script_helper.assert_python_ok" title="test.support.script_helper.assert_python_ok"><code class="xref py py-func docutils literal notranslate"><span class="pre">assert_python_ok()</span></code></a>。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>The function no longer strips whitespaces from <em>stderr</em>.</p>
 </div>
@@ -1459,7 +1459,7 @@ exit.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exc_traceback</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thread</span></code></p></li>
 </ul>
-<p>See <a class="reference internal" href="threading.html#threading.excepthook" title="threading.excepthook"><code class="xref py py-func docutils literal notranslate"><span class="pre">threading.excepthook()</span></code></a> documentation.</p>
+<p>參閱 <a class="reference internal" href="threading.html#threading.excepthook" title="threading.excepthook"><code class="xref py py-func docutils literal notranslate"><span class="pre">threading.excepthook()</span></code></a> 文件。</p>
 <p>These attributes are deleted at the context manager exit.</p>
 <p>用法：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">threading_helper</span><span class="o">.</span><span class="n">catch_threading_exception</span><span class="p">()</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
@@ -1925,7 +1925,7 @@ warnings directly.</p>
                         title="上一章">2to3 - 自動將 Python 2的程式碼轉成 Python 3</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="debug.html"
-                        title="下一章">Debugging and Profiling</a></p>
+                        title="下一章">除錯與效能分析</a></p>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
@@ -1951,7 +1951,7 @@ warnings directly.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="debug.html" title="Debugging and Profiling"
+          <a href="debug.html" title="除錯與效能分析"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="2to3.html" title="2to3 - 自動將 Python 2的程式碼轉成 Python 3"
@@ -1967,7 +1967,7 @@ warnings directly.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1990,7 +1990,7 @@ warnings directly.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -2004,11 +2004,11 @@ warnings directly.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

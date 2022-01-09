@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Coroutines and Tasks &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coroutines and Tasks &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="Streams" href="asyncio-stream.html" />
-    <link rel="prev" title="asyncio --- Asynchronous I/O" href="asyncio.html" />
+    <link rel="prev" title="asyncio --- 非同步 I/O" href="asyncio.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-task.html" />
     
       
@@ -93,7 +93,7 @@
 
   <h4>上個主題</h4>
   <p class="topless"><a href="asyncio.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="asyncio-stream.html"
                         title="下一章">Streams</a></p>
@@ -126,7 +126,7 @@
           <a href="asyncio-stream.html" title="Streams"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncio.html" title="asyncio --- Asynchronous I/O"
+          <a href="asyncio.html" title="asyncio --- 非同步 I/O"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -139,12 +139,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Coroutines and Tasks</a></li>
                 <li class="right">
                     
@@ -436,7 +436,7 @@ a task disappearing mid execution.</p>
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">name</span></code> 參數。</p>
 </div>
 </dd></dl>
 
@@ -988,10 +988,10 @@ coroutine in the copied context.</p>
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>Added support for the <a class="reference internal" href="contextvars.html#module-contextvars" title="contextvars: Context Variables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">contextvars</span></code></a> module.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">name</span></code> 參數。</p>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <em>loop</em> parameter.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span><em>loop</em> 參數。</p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.10 版本開始棄用: </span>Deprecation warning is emitted if <em>loop</em> is not specified
@@ -1011,7 +1011,7 @@ not guarantee that the Task will be cancelled, although
 suppressing cancellation completely is not common and is actively
 discouraged.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">msg</span></code> parameter.</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 參數。</p>
 </div>
 <p id="asyncio-example-task-cancel">The following example illustrates how coroutines can intercept
 the cancellation request:</p>
@@ -1210,7 +1210,7 @@ compatible with async/await code:</p>
 <p>This decorator should not be used for <a class="reference internal" href="../reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a>
 coroutines.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>Use <a class="reference internal" href="../reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> instead.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, will be removed in version 3.11: </span>Use <a class="reference internal" href="../reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> instead.</p>
 </div>
 </dd></dl>
 
@@ -1264,7 +1264,7 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
 
   <h4>上個主題</h4>
   <p class="topless"><a href="asyncio.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="asyncio-stream.html"
                         title="下一章">Streams</a></p>
@@ -1296,7 +1296,7 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
           <a href="asyncio-stream.html" title="Streams"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncio.html" title="asyncio --- Asynchronous I/O"
+          <a href="asyncio.html" title="asyncio --- 非同步 I/O"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -1309,12 +1309,12 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Coroutines and Tasks</a></li>
                 <li class="right">
                     
@@ -1333,7 +1333,7 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -1347,11 +1347,11 @@ decorated with <a class="reference internal" href="#asyncio.coroutine" title="as
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

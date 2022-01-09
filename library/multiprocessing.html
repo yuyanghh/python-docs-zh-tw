@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>multiprocessing --- Process-based parallelism &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiprocessing --- Process-based parallelism &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -169,7 +169,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -647,7 +647,7 @@ inherited from the creating process.</p>
 base class constructor (<code class="xref py py-meth docutils literal notranslate"><span class="pre">Process.__init__()</span></code>) before doing anything else
 to the process.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>Added the <em>daemon</em> argument.</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>daemon</em> 引數。</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="multiprocessing.Process.run">
@@ -742,7 +742,7 @@ random string using <a class="reference internal" href="os.html#os.urandom" titl
 <p>When a <a class="reference internal" href="#multiprocessing.Process" title="multiprocessing.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> object is created, it will inherit the
 authentication key of its parent process, although this may be changed by
 setting <a class="reference internal" href="#multiprocessing.Process.authkey" title="multiprocessing.Process.authkey"><code class="xref py py-attr docutils literal notranslate"><span class="pre">authkey</span></code></a> to another byte string.</p>
-<p>See <a class="reference internal" href="#multiprocessing-auth-keys"><span class="std std-ref">Authentication keys</span></a>.</p>
+<p>參閱 <a class="reference internal" href="#multiprocessing-auth-keys"><span class="std std-ref">Authentication keys</span></a>。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2461,8 +2461,9 @@ only one worker process is the order guaranteed to be &quot;correct&quot;.)</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="multiprocessing.pool.Pool.starmap">
 <span class="sig-name descname"><span class="pre">starmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">chunksize</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.pool.Pool.starmap" title="本定義的永久連結">¶</a></dt>
-<dd><p>Like <a class="reference internal" href="functions.html#map" title="map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">map()</span></code></a> except that the elements of the <em>iterable</em> are expected
-to be iterables that are unpacked as arguments.</p>
+<dd><p>Like <a class="reference internal" href="#multiprocessing.pool.Pool.map" title="multiprocessing.pool.Pool.map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">map()</span></code></a> except that the
+elements of the <em>iterable</em> are expected to be iterables that are
+unpacked as arguments.</p>
 <p>Hence an <em>iterable</em> of <code class="docutils literal notranslate"><span class="pre">[(1,2),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code> results in <code class="docutils literal notranslate"><span class="pre">[func(1,2),</span>
 <span class="pre">func(3,4)]</span></code>.</p>
 <div class="versionadded">
@@ -3568,7 +3569,7 @@ processes and collect the results:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -3591,7 +3592,7 @@ processes and collect the results:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -3605,11 +3606,11 @@ processes and collect the results:</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ctypes --- A foreign function library for Python &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ctypes --- A foreign function library for Python &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -160,7 +160,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -777,7 +777,7 @@ for debugging because they can provide useful information:</p>
 <span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<div class="admonition warning" id="ctypes-structureunion-alignment-byte-order">
+<div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p><a class="reference internal" href="#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> does not support passing unions or structures with bit-fields
 to functions by value.  While this may work on 32-bit x86, it's not
@@ -1420,7 +1420,7 @@ module instead of using <code class="xref py py-func docutils literal notranslat
 way is to instantiate one of the following classes:</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ctypes.CDLL">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">CDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.CDLL" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">CDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.CDLL" title="本定義的永久連結">¶</a></dt>
 <dd><p>Instances of this class represent loaded shared libraries. Functions in these
 libraries use the standard C calling convention, and are assumed to return
 <span class="xref c c-texpr"><span class="kt">int</span></span>.</p>
@@ -1442,7 +1442,7 @@ tracing tools.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="ctypes.OleDLL">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">OleDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.OleDLL" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">OleDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.OleDLL" title="本定義的永久連結">¶</a></dt>
 <dd><p>Windows only: Instances of this class represent loaded shared libraries,
 functions in these libraries use the <code class="docutils literal notranslate"><span class="pre">stdcall</span></code> calling convention, and are
 assumed to return the windows specific <a class="reference internal" href="#ctypes.HRESULT" title="ctypes.HRESULT"><code class="xref py py-class docutils literal notranslate"><span class="pre">HRESULT</span></code></a> code.  <a class="reference internal" href="#ctypes.HRESULT" title="ctypes.HRESULT"><code class="xref py py-class docutils literal notranslate"><span class="pre">HRESULT</span></code></a>
@@ -1456,7 +1456,7 @@ failure, an <a class="reference internal" href="exceptions.html#OSError" title="
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ctypes.WinDLL">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">WinDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.WinDLL" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctypes.</span></span><span class="sig-name descname"><span class="pre">WinDLL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DEFAULT_MODE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_errno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_last_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctypes.WinDLL" title="本定義的永久連結">¶</a></dt>
 <dd><p>Windows only: Instances of this class represent loaded shared libraries,
 functions in these libraries use the <code class="docutils literal notranslate"><span class="pre">stdcall</span></code> calling convention, and are
 assumed to return <span class="xref c c-texpr"><span class="kt">int</span></span> by default.</p>
@@ -1508,7 +1508,7 @@ that result in the most secure DLL load to avoiding issues such as DLL
 hijacking. Passing the full path to the DLL is the safest way to ensure the
 correct library and dependencies are loaded.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>Added <em>winmode</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>winmode</em> 參數。</p>
 </div>
 <dl class="py data">
 <dt class="sig sig-object py">
@@ -2764,7 +2764,7 @@ attribute changes the pointer to point to the assigned object.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2787,7 +2787,7 @@ attribute changes the pointer to point to the assigned object.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -2801,11 +2801,11 @@ attribute changes the pointer to point to the assigned object.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

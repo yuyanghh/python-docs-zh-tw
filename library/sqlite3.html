@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>sqlite3 --- DB-API 2.0 interface for SQLite databases &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqlite3 --- DB-API 2.0 interface for SQLite databases &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -148,7 +148,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -290,7 +290,7 @@ available data types for the supported SQL dialect.</p>
 </dd>
 <dt><a class="reference external" href="https://www.w3schools.com/sql/">https://www.w3schools.com/sql/</a></dt><dd><p>Tutorial, reference and examples for learning SQL syntax.</p>
 </dd>
-<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>PEP written by Marc-André Lemburg.</p>
+<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>PEP 由 Marc-André Lemburg 撰寫。</p>
 </dd>
 </dl>
 </div>
@@ -442,7 +442,7 @@ be found in the <a class="reference external" href="https://www.sqlite.org/uri.h
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.connect</span></code> with argument <code class="docutils literal notranslate"><span class="pre">database</span></code>.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.connect/handle</span></code> with argument <code class="docutils literal notranslate"><span class="pre">connection_handle</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.4 版本變更: </span>Added the <em>uri</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.4 版本變更: </span>新增 <em>uri</em> 參數。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span><em>database</em> can now also be a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>, not only a string.</p>
@@ -622,7 +622,7 @@ with older versions.</p>
 <p>The function can return any of the types supported by SQLite: bytes, str, int,
 float and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>deterministic</em> parameter was added.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>deterministic</em> 參數。</p>
 </div>
 <p>範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -1184,15 +1184,18 @@ until all rows were fetched.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sqlite3.Cursor.lastrowid">
 <span class="sig-name descname"><span class="pre">lastrowid</span></span><a class="headerlink" href="#sqlite3.Cursor.lastrowid" title="本定義的永久連結">¶</a></dt>
-<dd><p>This read-only attribute provides the rowid of the last modified row. It is
-only set if you issued an <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> or a <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> statement using the
-<a class="reference internal" href="#sqlite3.Cursor.execute" title="sqlite3.Cursor.execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code></a> method.  For operations other than <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> or
-<code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> or when <a class="reference internal" href="#sqlite3.Cursor.executemany" title="sqlite3.Cursor.executemany"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executemany()</span></code></a> is called, <a class="reference internal" href="#sqlite3.Cursor.lastrowid" title="sqlite3.Cursor.lastrowid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lastrowid</span></code></a> is
-set to <a class="reference internal" href="constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
-<p>If the <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> statement failed to insert the previous
-successful rowid is returned.</p>
+<dd><p>This read-only attribute provides the row id of the last inserted row. It
+is only updated after successful <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> statements
+using the <a class="reference internal" href="#sqlite3.Cursor.execute" title="sqlite3.Cursor.execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code></a> method.  For other statements, after
+<a class="reference internal" href="#sqlite3.Cursor.executemany" title="sqlite3.Cursor.executemany"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executemany()</span></code></a> or <a class="reference internal" href="#sqlite3.Cursor.executescript" title="sqlite3.Cursor.executescript"><code class="xref py py-meth docutils literal notranslate"><span class="pre">executescript()</span></code></a>, or if the insertion failed,
+the value of <code class="docutils literal notranslate"><span class="pre">lastrowid</span></code> is left unchanged.  The initial value of
+<code class="docutils literal notranslate"><span class="pre">lastrowid</span></code> is <a class="reference internal" href="constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>Inserts into <code class="docutils literal notranslate"><span class="pre">WITHOUT</span> <span class="pre">ROWID</span></code> tables are not recorded.</p>
+</div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> statement.</p>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> 陳述式的支援。</p>
 </div>
 </dd></dl>
 
@@ -1854,7 +1857,7 @@ extension support, you must pass the
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1877,7 +1880,7 @@ extension support, you must pass the
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -1891,11 +1894,11 @@ extension support, you must pass the
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

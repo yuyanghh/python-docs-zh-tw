@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>修飾器物件 &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descriptor（描述器）物件 &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -118,12 +118,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">修飾器物件</a></li>
+        <li class="nav-item nav-item-this"><a href="">Descriptor（描述器）物件</a></li>
                 <li class="right">
                     
 
@@ -147,13 +147,12 @@
           <div class="body" role="main">
             
   <section id="descriptor-objects">
-<span id="id1"></span><h1>修飾器物件<a class="headerlink" href="#descriptor-objects" title="本標題的永久連結">¶</a></h1>
-<p>&quot;Descriptors&quot; are objects that describe some attribute of an object. They are
-found in the dictionary of type objects.</p>
+<span id="id1"></span><h1>Descriptor（描述器）物件<a class="headerlink" href="#descriptor-objects" title="本標題的永久連結">¶</a></h1>
+<p>&quot;Descriptor&quot; 是描述物件某些屬性的物件，它們存在於型別物件的 dictionary（字典）中。</p>
 <dl class="c var">
 <dt class="sig sig-object c" id="c.PyProperty_Type">
 <a class="reference internal" href="type.html#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyProperty_Type</span></span></span><a class="headerlink" href="#c.PyProperty_Type" title="本定義的永久連結">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>The type object for the built-in descriptor types.</p>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>內建 descriptor 型別的型別物件。</p>
 </dd></dl>
 
 <dl class="c function">
@@ -184,9 +183,7 @@ found in the dictionary of type objects.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyDescr_IsData">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDescr_IsData</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">descr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDescr_IsData" title="本定義的永久連結">¶</a><br /></dt>
-<dd><p>Return non-zero if the descriptor objects <em>descr</em> describes a data attribute, or
-<code class="docutils literal notranslate"><span class="pre">0</span></code> if it describes a method.  <em>descr</em> must be a descriptor object; there is
-no error checking.</p>
+<dd><p>如果 descriptor 物件 <em>descr</em> 描述的是一個資料屬性則回傳非零值，或者如果它描述的是一個方法則返回 <code class="docutils literal notranslate"><span class="pre">0</span></code>。<em>descr</em> 必須為一個 descriptor 物件；沒有錯誤檢查。</p>
 </dd></dl>
 
 <dl class="c function">
@@ -250,12 +247,12 @@ no error checking.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="concrete.html" >Concrete Objects Layer</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">修飾器物件</a></li>
+        <li class="nav-item nav-item-this"><a href="">Descriptor（描述器）物件</a></li>
                 <li class="right">
                     
 
@@ -273,7 +270,7 @@ no error checking.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -287,11 +284,11 @@ no error checking.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

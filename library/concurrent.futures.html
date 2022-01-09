@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>concurrent.futures -- 啟動平行任務 &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concurrent.futures -- 啟動平行任務 &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -137,7 +137,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -189,7 +189,7 @@ should not be used directly, but through its concrete subclasses.</p>
 <div><dl class="py method">
 <dt class="sig sig-object py" id="concurrent.futures.Executor.submit">
 <span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#concurrent.futures.Executor.submit" title="本定義的永久連結">¶</a></dt>
-<dd><p>Schedules the callable, <em>fn</em>, to be executed as <code class="docutils literal notranslate"><span class="pre">fn(*args</span> <span class="pre">**kwargs)</span></code>
+<dd><p>Schedules the callable, <em>fn</em>, to be executed as <code class="docutils literal notranslate"><span class="pre">fn(*args,</span> <span class="pre">**kwargs)</span></code>
 and returns a <a class="reference internal" href="#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a> object representing the execution of the
 callable.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
@@ -223,7 +223,7 @@ using a large value for <em>chunksize</em> can significantly improve
 performance compared to the default size of 1.  With
 <a class="reference internal" href="#concurrent.futures.ThreadPoolExecutor" title="concurrent.futures.ThreadPoolExecutor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThreadPoolExecutor</span></code></a>, <em>chunksize</em> has no effect.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added the <em>chunksize</em> argument.</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>chunksize</em> 引數。</p>
 </div>
 </dd></dl>
 
@@ -261,7 +261,7 @@ returning. The remaining futures are cancelled.</p>
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>Added <em>cancel_futures</em>.</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>cancel_futures</em>。</p>
 </div>
 </dd></dl>
 
@@ -327,7 +327,7 @@ control the <a class="reference internal" href="threading.html#threading.Thread"
 the pool for easier debugging.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>Added the <em>initializer</em> and <em>initargs</em> arguments.</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>initializer</em> 與 <em>initargs</em> 引數。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>Default value of <em>max_workers</em> is changed to <code class="docutils literal notranslate"><span class="pre">min(32,</span> <span class="pre">os.cpu_count()</span> <span class="pre">+</span> <span class="pre">4)</span></code>.
@@ -411,7 +411,7 @@ freeze or deadlock.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>mp_context</em> argument was added to allow users to control the
 start_method for worker processes created by the pool.</p>
-<p>Added the <em>initializer</em> and <em>initargs</em> arguments.</p>
+<p>新增 <em>initializer</em> 與 <em>initargs</em> 引數。</p>
 </div>
 </dd></dl>
 
@@ -596,7 +596,8 @@ already done.</p>
 <dt class="sig sig-object py" id="concurrent.futures.wait">
 <span class="sig-prename descclassname"><span class="pre">concurrent.futures.</span></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_when</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ALL_COMPLETED</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#concurrent.futures.wait" title="本定義的永久連結">¶</a></dt>
 <dd><p>Wait for the <a class="reference internal" href="#concurrent.futures.Future" title="concurrent.futures.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a> instances (possibly created by different
-<a class="reference internal" href="#concurrent.futures.Executor" title="concurrent.futures.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> instances) given by <em>fs</em> to complete.  Returns a named
+<a class="reference internal" href="#concurrent.futures.Executor" title="concurrent.futures.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> instances) given by <em>fs</em> to complete. Duplicate futures
+given to <em>fs</em> are removed and will be returned only once. Returns a named
 2-tuple of sets.  The first set, named <code class="docutils literal notranslate"><span class="pre">done</span></code>, contains the futures that
 completed (finished or cancelled futures) before the wait completed.  The
 second set, named <code class="docutils literal notranslate"><span class="pre">not_done</span></code>, contains the futures that did not complete
@@ -793,7 +794,7 @@ fashion (for example, if it was killed from the outside).</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -816,7 +817,7 @@ fashion (for example, if it was killed from the outside).</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -830,11 +831,11 @@ fashion (for example, if it was killed from the outside).</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

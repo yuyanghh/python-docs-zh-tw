@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 標準函式庫 (Standard Library) &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 標準函式庫 (Standard Library) &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -118,7 +118,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Python 標準函式庫 (Standard Library)</a></li>
@@ -183,7 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#inheriting-from-built-in-exceptions">繼承自內建的例外</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#base-classes">Base classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#concrete-exceptions">Concrete exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exceptions.html#warnings">Warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#warnings">警告</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#exception-hierarchy">Exception hierarchy</a></li>
 </ul>
 </li>
@@ -211,7 +211,7 @@
 <li class="toctree-l2"><a class="reference internal" href="collections.abc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code> --- Abstract Base Classes for Containers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="heapq.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code> --- 堆積佇列 (heap queue) 演算法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bisect.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code> --- 陣列二分演算法 (Array bisection algorithm)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code> --- 高效率的數值型態陣列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code> --- 高效率的數值型陣列</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weakref.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code> --- Weak references</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code> --- Dynamic type creation and names for built-in types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="copy.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code> --- Shallow and deep copy operations</a></li>
@@ -227,7 +227,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cmath.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code> --- Mathematical functions for complex numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="decimal.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed point and floating point arithmetic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fractions.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fractions</span></code> --- Rational numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> --- Generate pseudo-random numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> --- 生成偽隨機數</a></li>
 <li class="toctree-l2"><a class="reference internal" href="statistics.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">statistics</span></code> --- 數學統計函式</a></li>
 </ul>
 </li>
@@ -315,7 +315,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ipc.html">Networking and Interprocess Communication</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="asyncio.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asyncio.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a></li>
 <li class="toctree-l2"><a class="reference internal" href="socket.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code> --- Low-level networking interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssl.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code> --- TLS/SSL wrapper for socket objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="select.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">select</span></code> --- Waiting for I/O completion</a></li>
@@ -361,7 +361,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cgitb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cgitb</span></code> --- Traceback manager for CGI scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wsgiref.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">wsgiref</span></code> --- WSGI Utilities and Reference Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="urllib.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib</span></code> --- URL 處理模組</a></li>
-<li class="toctree-l2"><a class="reference internal" href="urllib.request.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code> --- Extensible library for opening URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urllib.request.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code> --- 用來開啟 URLs 的可擴充函式庫</a></li>
 <li class="toctree-l2"><a class="reference internal" href="urllib.request.html#module-urllib.response"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.response</span></code> --- Response classes used by urllib</a></li>
 <li class="toctree-l2"><a class="reference internal" href="urllib.parse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.parse</span></code> --- Parse URLs into components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="urllib.error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.error</span></code> --- Exception classes raised by urllib.request</a></li>
@@ -427,7 +427,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydoc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- Documentation generator and online help system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="devmode.html">Python Development Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="devmode.html#effects-of-the-python-development-mode">Effects of the Python Development Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devmode.html#resourcewarning-example">ResourceWarning Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devmode.html#resourcewarning-example">ResourceWarning 範例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="devmode.html#bad-file-descriptor-error-example">Bad file descriptor error example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="doctest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code> --- Test interactive Python examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unittest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code> --- 單元測試框架</a></li>
@@ -445,8 +445,8 @@
 <li class="toctree-l2"><a class="reference internal" href="test.html#module-test.support.warnings_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code> --- Utilities for warnings tests</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging and Profiling</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="audit_events.html">Audit events table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">除錯與效能分析</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="audit_events.html">稽核事件表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bdb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bdb</span></code> --- Debugger framework</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faulthandler.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pdb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code> --- The Python Debugger</a></li>
@@ -599,7 +599,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Python 標準函式庫 (Standard Library)</a></li>
@@ -620,7 +620,7 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -634,11 +634,11 @@
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

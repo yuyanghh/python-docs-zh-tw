@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ast --- Abstract Syntax Trees &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ast --- Abstract Syntax Trees &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -147,7 +147,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -267,7 +267,7 @@ compiled into a Python code object using the built-in <a class="reference intern
          <span class="c c-Singleline">-- x &lt; 4 &lt; 3 and (x &lt; 4) &lt; 3</span>
          <span class="o">|</span> <span class="nc">Compare</span><span class="p">(</span><span class="bp">expr</span><span class="o"> </span><span class="n">left</span>, <span class="bp">cmpop</span><span class="o">* </span><span class="n">ops</span>, <span class="bp">expr</span><span class="o">* </span><span class="n">comparators</span><span class="p">)</span>
          <span class="o">|</span> <span class="nc">Call</span><span class="p">(</span><span class="bp">expr</span><span class="o"> </span><span class="n">func</span>, <span class="bp">expr</span><span class="o">* </span><span class="n">args</span>, <span class="bp">keyword</span><span class="o">* </span><span class="n">keywords</span><span class="p">)</span>
-         <span class="o">|</span> <span class="nc">FormattedValue</span><span class="p">(</span><span class="bp">expr</span><span class="o"> </span><span class="n">value</span>, <span class="bp">int</span><span class="o">? </span><span class="n">conversion</span>, <span class="bp">expr</span><span class="o">? </span><span class="n">format_spec</span><span class="p">)</span>
+         <span class="o">|</span> <span class="nc">FormattedValue</span><span class="p">(</span><span class="bp">expr</span><span class="o"> </span><span class="n">value</span>, <span class="bp">int</span><span class="o"> </span><span class="n">conversion</span>, <span class="bp">expr</span><span class="o">? </span><span class="n">format_spec</span><span class="p">)</span>
          <span class="o">|</span> <span class="nc">JoinedStr</span><span class="p">(</span><span class="bp">expr</span><span class="o">* </span><span class="n">values</span><span class="p">)</span>
          <span class="o">|</span> <span class="nc">Constant</span><span class="p">(</span><span class="bp">constant</span><span class="o"> </span><span class="n">value</span>, <span class="bp">string</span><span class="o">? </span><span class="n">kind</span><span class="p">)</span>
 
@@ -2295,7 +2295,7 @@ sufficiently large/complex string due to stack depth limitations
 in Python's AST compiler.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>Added <code class="docutils literal notranslate"><span class="pre">type_comments</span></code>, <code class="docutils literal notranslate"><span class="pre">mode='func_type'</span></code> and <code class="docutils literal notranslate"><span class="pre">feature_version</span></code>.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">type_comments</span></code>、<code class="docutils literal notranslate"><span class="pre">mode='func_type'</span></code> 與 <code class="docutils literal notranslate"><span class="pre">feature_version</span></code>。</p>
 </div>
 </dd></dl>
 
@@ -2521,7 +2521,7 @@ selects the single line representation. Using a positive integer indent
 indents that many spaces per level.  If <em>indent</em> is a string (such as <code class="docutils literal notranslate"><span class="pre">&quot;\t&quot;</span></code>),
 that string is used to indent each level.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>Added the <em>indent</em> option.</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>indent</em> 選項。</p>
 </div>
 </dd></dl>
 
@@ -2712,7 +2712,7 @@ in your python file.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2735,7 +2735,7 @@ in your python file.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -2749,11 +2749,11 @@ in your python file.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

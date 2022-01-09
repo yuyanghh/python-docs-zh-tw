@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>json --- JSON encoder and decoder &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json --- JSON encoder and decoder &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -140,7 +140,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -267,7 +267,7 @@ is a lightweight data interchange format inspired by
 <span class="go">Expecting property name enclosed in double quotes: line 1 column 2 (char 1)</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="#json-commandline"><span class="std std-ref">Command Line Interface</span></a> for detailed documentation.</p>
+<p>更詳盡的文件請見 <a class="reference internal" href="#json-commandline"><span class="std std-ref">Command Line Interface</span></a>。</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>JSON is a subset of <a class="reference external" href="http://yaml.org/">YAML</a> 1.2.  The JSON produced by
@@ -304,7 +304,7 @@ have all incoming non-ASCII characters escaped.  If <em>ensure_ascii</em> is
 false, these characters will be output as-is.</p>
 <p>If <em>check_circular</em> is false (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>), then the circular
 reference check for container types will be skipped and a circular reference
-will result in an <a class="reference internal" href="exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> (or worse).</p>
+will result in an <a class="reference internal" href="exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a> (or worse).</p>
 <p>If <em>allow_nan</em> is false (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>), then it will be a
 <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> to serialize out of range <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> values (<code class="docutils literal notranslate"><span class="pre">nan</span></code>,
 <code class="docutils literal notranslate"><span class="pre">inf</span></code>, <code class="docutils literal notranslate"><span class="pre">-inf</span></code>) in strict compliance of the JSON specification.
@@ -380,7 +380,7 @@ return value of <em>object_pairs_hook</em> will be used instead of the
 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  This feature can be used to implement custom decoders.
 If <em>object_hook</em> is also defined, the <em>object_pairs_hook</em> takes priority.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.1 版本變更: </span>Added support for <em>object_pairs_hook</em>.</p>
+<p><span class="versionmodified changed">在 3.1 版本變更: </span>新增對於 <em>object_pairs_hook</em> 的支援。</p>
 </div>
 <p><em>parse_float</em>, if specified, will be called with the string of every JSON
 float to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">float(num_str)</span></code>.
@@ -486,7 +486,7 @@ JSON object decoded with an ordered list of pairs.  The return value of
 feature can be used to implement custom decoders.  If <em>object_hook</em> is also
 defined, the <em>object_pairs_hook</em> takes priority.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.1 版本變更: </span>Added support for <em>object_pairs_hook</em>.</p>
+<p><span class="versionmodified changed">在 3.1 版本變更: </span>新增對於 <em>object_pairs_hook</em> 的支援。</p>
 </div>
 <p><em>parse_float</em>, if specified, will be called with the string of every JSON
 float to be decoded.  By default, this is equivalent to <code class="docutils literal notranslate"><span class="pre">float(num_str)</span></code>.
@@ -584,7 +584,7 @@ have all incoming non-ASCII characters escaped.  If <em>ensure_ascii</em> is
 false, these characters will be output as-is.</p>
 <p>If <em>check_circular</em> is true (the default), then lists, dicts, and custom
 encoded objects will be checked for circular references during encoding to
-prevent an infinite recursion (which would cause an <a class="reference internal" href="exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>).
+prevent an infinite recursion (which would cause an <a class="reference internal" href="exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a>).
 Otherwise, no such check takes place.</p>
 <p>If <em>allow_nan</em> is true (the default), then <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> will be encoded as such.  This behavior is not JSON
@@ -990,7 +990,7 @@ U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1013,7 +1013,7 @@ U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -1027,11 +1027,11 @@ U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

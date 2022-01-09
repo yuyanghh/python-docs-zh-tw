@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Expressions &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Expressions &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -170,7 +170,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 語言參考手冊</a> &#187;</li>
@@ -456,9 +456,9 @@ with 3.7, any function can use asynchronous generator expressions.</p>
 <p>The yield expression is used when defining a <a class="reference internal" href="../glossary.html#term-generator"><span class="xref std std-term">generator</span></a> function
 or an <a class="reference internal" href="../glossary.html#term-asynchronous-generator"><span class="xref std std-term">asynchronous generator</span></a> function and
 thus can only be used in the body of a function definition.  Using a yield
-expression in a function's body causes that function to be a generator,
+expression in a function's body causes that function to be a generator function,
 and using it in an <a class="reference internal" href="compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> function's body causes that
-coroutine function to be an asynchronous generator. For example:</p>
+coroutine function to be an asynchronous generator function. For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>  <span class="c1"># defines a generator function</span>
     <span class="k">yield</span> <span class="mi">123</span>
 
@@ -1255,7 +1255,7 @@ The following (non-exhaustive) examples illustrate that:</p>
 <li><p>Inverse comparison should result in the boolean negation.
 In other words, the following expressions should have the same result:</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code> 和 <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code> (for total ordering)</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code> (for total ordering)</p>
 </div></blockquote>
@@ -1678,7 +1678,7 @@ precedence applies.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 語言參考手冊</a> &#187;</li>
@@ -1700,7 +1700,7 @@ precedence applies.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -1714,11 +1714,11 @@ precedence applies.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

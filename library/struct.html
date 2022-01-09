@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>struct --- Interpret bytes as packed binary data &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>struct --- Interpret bytes as packed binary data &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -181,7 +181,7 @@ or omit implicit pad bytes, use <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">native</span></code> size and alignment: see <a class="reference internal" href="#struct-alignment"><span class="std std-ref">Byte Order, Size, and Alignment</span></a> for details.</p>
 </div>
 <p>Several <a class="reference internal" href="#module-struct" title="struct: Interpret bytes as packed binary data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> functions (and methods of <a class="reference internal" href="#struct.Struct" title="struct.Struct"><code class="xref py py-class docutils literal notranslate"><span class="pre">Struct</span></code></a>) take a <em>buffer</em>
-argument.  This refers to objects that implement the <a class="reference internal" href="../c-api/buffer.html#bufferobjects"><span class="std std-ref">Buffer Protocol</span></a> and
+argument.  This refers to objects that implement the <a class="reference internal" href="../c-api/buffer.html#bufferobjects"><span class="std std-ref">緩衝協定 (Buffer Protocol)</span></a> and
 provide either a readable or read-writable buffer.  The most common types used
 for that purpose are <a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and <a class="reference internal" href="stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>, but many other types
 that can be viewed as an array of bytes implement the buffer protocol, so that
@@ -489,10 +489,10 @@ platform-dependent.</p>
 </tbody>
 </table>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">'n'</span></code> and <code class="docutils literal notranslate"><span class="pre">'N'</span></code> formats.</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">'n'</span></code> 與 <code class="docutils literal notranslate"><span class="pre">'N'</span></code> 格式的支援。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">'e'</span></code> format.</p>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">'e'</span></code> 格式的支援。</p>
 </div>
 <p>註解：</p>
 <ol class="arabic">
@@ -769,7 +769,7 @@ by the <a class="reference internal" href="#struct.pack" title="struct.pack"><co
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -792,7 +792,7 @@ by the <a class="reference internal" href="#struct.pack" title="struct.pack"><co
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -806,11 +806,11 @@ by the <a class="reference internal" href="#struct.pack" title="struct.pack"><co
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

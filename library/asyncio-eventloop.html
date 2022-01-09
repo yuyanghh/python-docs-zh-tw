@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Event Loop &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -155,12 +155,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Event Loop</a></li>
                 <li class="right">
                     
@@ -241,7 +241,7 @@ In future Python releases, this function will be an alias of
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.new_event_loop">
 <span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">new_event_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.new_event_loop" title="本定義的永久連結">¶</a></dt>
-<dd><p>Create a new event loop object.</p>
+<dd><p>Create and return a new event loop object.</p>
 </dd></dl>
 
 <p>Note that the behaviour of <a class="reference internal" href="#asyncio.get_event_loop" title="asyncio.get_event_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_event_loop()</span></code></a>, <a class="reference internal" href="#asyncio.set_event_loop" title="asyncio.set_event_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_event_loop()</span></code></a>,
@@ -714,7 +714,7 @@ transport. If specified, <em>local_addr</em> and <em>remote_addr</em> should be 
 concerns.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>Added support for Windows.</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增對於 Windows 的支援。</p>
 </div>
 </dd></dl>
 
@@ -798,7 +798,7 @@ the user should await on <a class="reference internal" href="#asyncio.Server.sta
 connections.</p></li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span>Added <em>ssl_handshake_timeout</em> and <em>start_serving</em> parameters.</p>
+<p><span class="versionmodified added">在 3.7 版本新加入: </span>新增 <em>ssl_handshake_timeout</em> 與 <em>start_serving</em> 參數。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>The socket option <code class="xref py py-data docutils literal notranslate"><span class="pre">TCP_NODELAY</span></code> is set by default
@@ -1913,12 +1913,12 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+      <a href="../index.html">3.10.1 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Event Loop</a></li>
                 <li class="right">
                     
@@ -1937,7 +1937,7 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="../copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -1951,11 +1951,11 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>

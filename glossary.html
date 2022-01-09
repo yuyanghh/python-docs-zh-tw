@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>術語表 &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>術語表 &#8212; Python 3.10.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?2021.11.1" />
@@ -20,14 +20,14 @@
     <script src="_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.10.1 說明文件 中搜尋"
           href="_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="about.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜尋" href="search.html" />
     <link rel="copyright" title="版權" href="copyright.html" />
     <link rel="next" title="關於這些說明文件" href="about.html" />
-    <link rel="prev" title="為什麼Python被安裝在我的機器上?常見問答集" href="faq/installed.html" />
+    <link rel="prev" title="「為什麼 Python 被安裝在我的機器上？」常見問答集" href="faq/installed.html" />
     <link rel="canonical" href="https://docs.python.org/3/glossary.html" />
     
       
@@ -72,7 +72,7 @@
             <div class="language_switcher_placeholder"></div>
   <h4>上個主題</h4>
   <p class="topless"><a href="faq/installed.html"
-                        title="上一章">為什麼Python被安裝在我的機器上?常見問答集</a></p>
+                        title="上一章">「為什麼 Python 被安裝在我的機器上？」常見問答集</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="about.html"
                         title="下一章">關於這些說明文件</a></p>
@@ -105,7 +105,7 @@
           <a href="about.html" title="關於這些說明文件"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="faq/installed.html" title="為什麼Python被安裝在我的機器上?常見問答集"
+          <a href="faq/installed.html" title="「為什麼 Python 被安裝在我的機器上？」常見問答集"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -118,7 +118,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="index.html">3.10.0 Documentation</a> &#187;
+      <a href="index.html">3.10.1 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">術語表</a></li>
@@ -215,7 +215,7 @@ when the object cannot be destroyed before the last usage of the borrowed
 reference. The <a class="reference internal" href="c-api/refcounting.html#c.Py_NewRef" title="Py_NewRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_NewRef()</span></code></a> function can be used to create a new
 <a class="reference internal" href="#term-strong-reference"><span class="xref std std-term">strong reference</span></a>.</p>
 </dd>
-<dt id="term-bytes-like-object">bytes-like object（類位元組串物件）<a class="headerlink" href="#term-bytes-like-object" title="本術語的永久連結">¶</a></dt><dd><p>一個支援<a class="reference internal" href="c-api/buffer.html#bufferobjects"><span class="std std-ref">Buffer Protocol</span></a>且能夠匯出 C-<a class="reference internal" href="#term-contiguous"><span class="xref std std-term">contiguous</span></a> 緩衝區的物件。這包括所有的 <a class="reference internal" href="library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>、<a class="reference internal" href="library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> 和 <a class="reference internal" href="library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array.array</span></code></a> 物件，以及許多常見的 <a class="reference internal" href="library/stdtypes.html#memoryview" title="memoryview"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> 物件。類位元組串物件可用於處理二進制資料的各種運算；這些運算包括壓縮、儲存至二進制檔案和透過 socket（插座）發送。</p>
+<dt id="term-bytes-like-object">bytes-like object（類位元組串物件）<a class="headerlink" href="#term-bytes-like-object" title="本術語的永久連結">¶</a></dt><dd><p>一個支援<a class="reference internal" href="c-api/buffer.html#bufferobjects"><span class="std std-ref">緩衝協定 (Buffer Protocol)</span></a>且能夠匯出 C-<a class="reference internal" href="#term-contiguous"><span class="xref std std-term">contiguous</span></a> 緩衝區的物件。這包括所有的 <a class="reference internal" href="library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>、<a class="reference internal" href="library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> 和 <a class="reference internal" href="library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array.array</span></code></a> 物件，以及許多常見的 <a class="reference internal" href="library/stdtypes.html#memoryview" title="memoryview"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> 物件。類位元組串物件可用於處理二進制資料的各種運算；這些運算包括壓縮、儲存至二進制檔案和透過 socket（插座）發送。</p>
 <p>有些運算需要二進制資料是可變的。說明文件通常會將這些物件稱為「可讀寫的類位元組串物件」。可變緩衝區的物件包括 <a class="reference internal" href="library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>，以及 <a class="reference internal" href="library/stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> 的 <a class="reference internal" href="library/stdtypes.html#memoryview" title="memoryview"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a>。其他的運算需要讓二進制資料被儲存在不可變物件（「唯讀的類位元組串物件」）中；這些物件包括 <a class="reference internal" href="library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>，以及 <a class="reference internal" href="library/stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 物件的 <a class="reference internal" href="library/stdtypes.html#memoryview" title="memoryview"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a>。</p>
 </dd>
 <dt id="term-bytecode">bytecode（位元組碼）<a class="headerlink" href="#term-bytecode" title="本術語的永久連結">¶</a></dt><dd><p>Python 的原始碼會被編譯成位元組碼，它是 Python 程式在 CPython 直譯器中的內部表示法。該位元組碼也會被暫存在 <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> 檔案中，以便第二次執行同一個檔案時能夠更快速（可以不用從原始碼重新編譯為位元組碼）。這種「中間語言 (intermediate language)」據說是運行在一個 <a class="reference internal" href="#term-virtual-machine"><span class="xref std std-term">virtual machine</span></a>（虛擬機器）上，該虛擬機器會執行與每個位元組碼對應的機器碼 (machine code)。要注意的是，位元組碼理論上是無法在不同的 Python 虛擬機器之間運作的，也不能在不同版本的 Python 之間保持穩定。</p>
@@ -557,7 +557,7 @@ between Unicode filenames and bytes filenames.</p>
 </dd>
 <dt id="term-single-dispatch">single dispatch（單一調度）<a class="headerlink" href="#term-single-dispatch" title="本術語的永久連結">¶</a></dt><dd><p><a class="reference internal" href="#term-generic-function"><span class="xref std std-term">generic function</span></a>（泛型函式）調度的一種形式，在此，實作的選擇是基於單一引數的型別。</p>
 </dd>
-<dt id="term-slice">slice（切片）<a class="headerlink" href="#term-slice" title="本術語的永久連結">¶</a></dt><dd><p>一個物件，它通常包含一段 <a class="reference internal" href="#term-sequence"><span class="xref std std-term">sequence</span></a>（序列）的某一部分。建立一段切片的方法是使用下標符號（subscript notation）``[]``，若要給出多個數字，則在數字之間使用冒號，例如 <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">variable_name[1:3:5]</span></code>。在括號（下標）符號的內部，會使用 <a class="reference internal" href="library/functions.html#slice" title="slice"><code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code></a> 物件。</p>
+<dt id="term-slice">slice（切片）<a class="headerlink" href="#term-slice" title="本術語的永久連結">¶</a></dt><dd><p>一個物件，它通常包含一段 <a class="reference internal" href="#term-sequence"><span class="xref std std-term">sequence</span></a>（序列）的某一部分。建立一段切片的方法是使用下標符號 (subscript notation) <code class="docutils literal notranslate"><span class="pre">[]</span></code>，若要給出多個數字，則在數字之間使用冒號，例如 <code class="docutils literal notranslate"><span class="pre">variable_name[1:3:5]</span></code>。在括號（下標）符號的內部，會使用 <a class="reference internal" href="library/functions.html#slice" title="slice"><code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code></a> 物件。</p>
 </dd>
 <dt id="term-special-method">special method（特殊方法）<a class="headerlink" href="#term-special-method" title="本術語的永久連結">¶</a></dt><dd><p id="index-34">一種會被 Python 自動呼叫的 method，用於對某種型別執行某種運算，例如加法。這種 method 的名稱會在開頭和結尾有兩個下底線。Special method 在<a class="reference internal" href="reference/datamodel.html#specialnames"><span class="std std-ref">Special method names</span></a>中有詳細說明。</p>
 </dd>
@@ -636,7 +636,7 @@ avoid leaking one reference.</p>
         <div class="sphinxsidebarwrapper">
   <h4>上個主題</h4>
   <p class="topless"><a href="faq/installed.html"
-                        title="上一章">為什麼Python被安裝在我的機器上?常見問答集</a></p>
+                        title="上一章">「為什麼 Python 被安裝在我的機器上？」常見問答集</a></p>
   <h4>下個主題</h4>
   <p class="topless"><a href="about.html"
                         title="下一章">關於這些說明文件</a></p>
@@ -668,7 +668,7 @@ avoid leaking one reference.</p>
           <a href="about.html" title="關於這些說明文件"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="faq/installed.html" title="為什麼Python被安裝在我的機器上?常見問答集"
+          <a href="faq/installed.html" title="「為什麼 Python 被安裝在我的機器上？」常見問答集"
              >上一頁</a> |</li>
 
           <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -681,7 +681,7 @@ avoid leaking one reference.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="index.html">3.10.0 Documentation</a> &#187;
+      <a href="index.html">3.10.1 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">術語表</a></li>
@@ -702,7 +702,7 @@ avoid leaking one reference.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html">版權</a> 2001-2021, Python Software Foundation.
+    &copy; <a href="copyright.html">版權</a> 2001-2022, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
@@ -716,11 +716,11 @@ avoid leaking one reference.</p>
 <br />
     <br />
 
-    最後更新於 12月 04, 2021。
+    最後更新於 1月 09, 2022。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2 建立。
     </div>
 
   </body>
